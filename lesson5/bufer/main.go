@@ -42,11 +42,12 @@ func main() {
 	}
 
 	//Преоброазование строкового литерала к чему-нибудь числовому
-	numStr := "125.2255988"
+	numStr := "10"
+	numInt64, _ := strconv.ParseInt(numStr, 2, 64)
+	fmt.Println(numInt64)
 	numInt, _ := strconv.Atoi(numStr) // Atoi - Anything to Int (именно int)
 	fmt.Printf("%d is %T\n", numInt, numInt)
 
-	numInt64, _ := strconv.ParseInt(numStr, 36, 64)
 	numFloat32, _ := strconv.ParseFloat(numStr, 32) // Но это 64-разрядное число будет без проблем ГАРАНТИРОВАНО ПРЕВОДИТЬСЯ К 32
 
 	fmt.Println(numInt64, numFloat32)

@@ -58,4 +58,21 @@ func main() {
 			fmt.Printf("Current class id is \"%v\" \n", classId)
 		}
 	}
+
+	// Срезы
+	sliceArray := []int{1, 1, 3, 4, 5, 6, 7}
+	sliceArray[0] = 1
+	sliceArray[1] = 1
+	sliceArray[2] = 1
+	sliceArray[3] = 1
+	sliceArray[4] = 1
+
+	fmt.Println(sliceArray)
+
+	filledSliceWithFor := []int{1}
+
+	for i := 0; i < 150; i++ {
+		filledSliceWithFor = append(filledSliceWithFor, i)
+	}
+	fmt.Println(filledSliceWithFor)
 }
